@@ -3,15 +3,25 @@ header, main, footer { padding: 12px 24px; }
 h1 { margin: 0; font-size: 22px; }
 .sub { margin: 2px 0 0; color: #666; }
 .list { list-style: none; margin: 0; padding: 0; max-width: 960px; }
-.row { display: grid; grid-template-columns: 90px 50px 1fr 200px auto; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; }
+.row { display: grid; grid-template-columns: 90px 50px 1fr 200px auto; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; cursor: pointer; }
+.row:hover { background: #f6f7fb; }
+.row:focus-visible { outline: 2px solid #2f5bd7; outline-offset: -2px; }
+.row .open-hint { color: #8a8a92; font-size: 13px; }
 .row .id { font-family: ui-monospace, monospace; }
 .row.sev1 .sev { color: #b00020; font-weight: 600; }
 .row.sev2 .sev { color: #a15c00; }
 .row time { color: #555; font-variant-numeric: tabular-nums; }
-.row button { font: inherit; padding: 4px 12px; border: 1px solid #c9c9cf; border-radius: 6px; background: #fff; cursor: pointer; }
-.row button:hover:not(:disabled) { background: #f0f0f2; }
-.row button:disabled { opacity: 0.5; cursor: default; }
-.row .acked { color: #0a7d3c; font-weight: 600; }
+.panel { max-width: 960px; margin: 8px 0 16px; padding: 14px 16px; border: 1px solid #d8d8de; border-radius: 10px; background: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.panel-head h2 { margin: 0; font-size: 17px; }
+.panel .what { margin: 8px 0 4px; }
+.panel .when { margin: 0; color: #555; }
+.panel-actions { margin-top: 12px; }
+.panel-actions button, .panel .close { font: inherit; padding: 5px 14px; border: 1px solid #c9c9cf; border-radius: 6px; background: #fff; cursor: pointer; }
+.panel-actions button:hover:not(:disabled) { background: #f0f0f2; }
+.panel-actions button:disabled { opacity: 0.5; cursor: default; }
+.panel .close { color: #555; font-size: 13px; }
+.row .acked, .panel .acked { color: #0a7d3c; font-weight: 600; }
 .loader, .empty, .error { max-width: 960px; padding: 24px 12px; color: #666; }
 .error { color: #b00020; }
 footer { color: #777; font-size: 13px; }

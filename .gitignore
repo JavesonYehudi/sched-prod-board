@@ -1,4 +1,10 @@
 node_modules/
-check-local.mjs
-record.mjs
-screenshots/
+check-local*.mjs
+record*.mjs
+shots/
+video*/
+race*.out
+record-*.json
+board-ack.webm
+board-ack-race*.webm
+package-lock.json
